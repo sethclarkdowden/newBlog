@@ -1,5 +1,6 @@
 NewBlog::Application.routes.draw do
-  root :to => "Post#index"
+  root :to => "Posts#index"
+  resources :posts
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
