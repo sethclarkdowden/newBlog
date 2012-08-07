@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
 	def create
-	    post_id = params[:comment].delete(:article_id)
+	    post_id = params[:comment].delete(:post_id)
 
-	    @comment = Comments.new(params[:comment])
+	    @comment = Comment.new(params[:comment])
 	    @comment.post_id = post_id
 
 	    @comment.save
