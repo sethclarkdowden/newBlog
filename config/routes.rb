@@ -1,6 +1,7 @@
 NewBlog::Application.routes.draw do
   root :to => "Posts#index"
   resources :posts
+  resources :comments
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

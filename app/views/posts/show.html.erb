@@ -1,5 +1,5 @@
 <h1><%= @post.title %></h1>
-<p><%= @post.author %></p>
+<p>By: <%= @post.author  %> / <%= @post.created_at %></p>
 <p><%= @post.body %></p>
 <ul>
 	<li>
@@ -9,3 +9,5 @@
 		<%= link_to "delete", post_path(@post), :method =>:delete, :confirm => "Reallu delete this article"%>
 	</li>
 </ul>
+<%= render :partial => 'comment', :collection => @post.comments %>
+<%= render :partial => 'comments_form' %>
