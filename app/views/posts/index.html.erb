@@ -3,7 +3,11 @@
 <ul>
   <% @posts.each do |post| %>
     <li>
-    	<%= link_to post.title, post_path(post), :class => 'post_title', :id => "post_#{post.id}" %> 
+    	<%= link_to post.title, post_path(post), :class => 'post_title', :id => "post_#{post.id}" %>
+    	<p> 
+    		<%= truncate(post.body, :length => 500, :separator => ' ', :omission => '... ' ) %>
+    		<%= link_to "(continued)", post_path(post), :class => 'post_title', :id => "post_#{post.id}" %>
+    	</p>
     </li>
   <% end %>
 </ul>

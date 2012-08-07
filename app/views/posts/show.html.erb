@@ -1,3 +1,12 @@
 <h1><%= @post.title %></h1><br>
+
 <p><%= @post.body %></p>
-<%= link_to "delete", post_path(@post), :method =>:delete, :confirm => "Reallu delete this article"%>
+
+<ul>
+	<li>
+		<%= link_to "edit", edit_post_path(@post) %>
+	</li>
+	<li>
+		<%= link_to "delete", post_path(@post), :method =>:delete, :confirm => "Reallu delete this article"%>
+	</li>
+</ul>
