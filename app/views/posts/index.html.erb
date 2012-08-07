@@ -4,6 +4,9 @@
   <% @posts.each do |post| %>
     <li>
     	<%= link_to post.title, post_path(post), :class => 'post_title', :id => "post_#{post.id}" %><br>
+            <% if post.img? %>
+                <%= image_tag post.img.url(:thumb) %>
+            <% end %>
     	<p>By: <%= post.author  %>, <%= post.created_at.strftime("%m/%d/%Y") %> <%= post.created_at.strftime("At %I:%M%p") %></p>	
 
     	<p> 

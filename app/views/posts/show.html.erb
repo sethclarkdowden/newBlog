@@ -1,13 +1,21 @@
 <h1><%= @post.title %></h1>
-<p>By: <%= @post.author  %> / <%= @post.created_at %></p>
-<p><%= @post.body %></p>
-<ul>
-	<li>
-		<%= link_to "edit", edit_post_path(@post) %>
-	</li>
-	<li>
-		<%= link_to "delete", post_path(@post), :method =>:delete, :confirm => "Reallu delete this article"%>
-	</li>
-</ul>
+
+	<% if @post.img? %>
+			<%= image_tag @post.img.url(:medium) %>
+	<% end %>
+
+<p>
+	By: <%= @post.author  %>, <%= @post.created_at.strftime("%m/%d/%Y") %> <%= @post.created_at.strftime("At %I:%M%p") %>
+</p>	
+
+<p>
+	<%= @post.body %>
+</p>
+
+<%= link_to "edit", edit_post_path(@post) %>
+<%= link_to "delete", post_path(@post), :method =>:delete, :confirm => "Reallu delete this article"%>
+<%= link_to "Back to Articles List", post_path %>
+
+
 <%= render :partial => 'comment', :collection => @post.comments %>
-<%= render :partial => 'comments_form' %>
+<%= render :partial => 'comment_form' %>
