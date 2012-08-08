@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-
+before_filter :authenticate_admin!, :except=> [:index, :show]
 	
-
+	
 	def index
 		@posts = Post.paginate(:page => params[:page], :per_page => 5)
 		
@@ -14,16 +14,16 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		@post = Post.new
+			@post = Post.new
 	end
 
 	def edit
-		@post = Post.find(params[:id])	
+		@post = Post.find(params[:id]) 
 	end
 
 	def create
-		@post = Post.new(params[:post])
-		@post.save
+		@post = Post.new(params[:post]) 
+		@post.save 
 
 		redirect_to post_path(@post)
 
@@ -40,6 +40,10 @@ class PostsController < ApplicationController
 		@post = Post.destroy(params[:id])
 
 		redirect_to posts_path(@post)
+	end
+
+	def current_user
+		@current_user = current_admin
 	end
 
 end

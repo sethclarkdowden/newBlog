@@ -12,8 +12,8 @@
 	<%= @post.body %>
 </p>
 
-<%= link_to "edit", edit_post_path(@post) %>
-<%= link_to "delete", post_path(@post), :method =>:delete, :confirm => "Reallu delete this article"%>
+<%= link_to "edit", edit_post_path(@post) if can? :update, @post %>
+<%= link_to "delete", post_path(@post) if can? :destroy, @post, :method =>:delete, :confirm => "Reallu delete this article"%>
 <%= link_to "Back to Articles List", post_path %>
 
 
