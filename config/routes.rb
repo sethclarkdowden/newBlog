@@ -1,4 +1,6 @@
 NewBlog::Application.routes.draw do
+  devise_for :admins
+
   root :to => "Posts#index"
   resources :posts
   resources :comments
