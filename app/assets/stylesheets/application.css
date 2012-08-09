@@ -11,19 +11,60 @@
  *= require_self
  *= require_tree .
  */
+.lower_header {
+	height: 100px;
+	margin: 0 auto;
+	width: 1020px;
+}
+
+.header_links {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 13px;
+	font:14px/22px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header_links li{
+	position: relative;
+	float: left;
+	margin: 0 10px 0 0;
+
+}
+.header_links a{
+	padding-bottom: 64px;
+	color: #333;
+text-decoration: none;
+font-weight: bold;
+-webkit-transition: color 0.1s linear;
+}
+.header_links a:hover{
+	color: #FF4629;
+	border-bottom: 3px solid #333;
+}
+
 h2 {
 font-size: 24px;
 border-bottom: 1px solid #CCC;
 color: black;
 	
 }
+.field {
+	width: 1020px;
+	margin: 0 auto;
 
+}
 .contaner{
 	width: 700px;
-	margin: 0 auto;
+	float: left;
 	padding: 3px;
 background: #EEE;
 border-radius: 3px;
+}
+
+.side_bar {
+	width: 300px;
+	float: right;
 }
 
 .post{
@@ -37,7 +78,7 @@ border-radius: 3px;
 	color: black;
 }
 
-.post_title a:hover {
+.post_title:hover {
 	text-decoration: underline;
 }
 

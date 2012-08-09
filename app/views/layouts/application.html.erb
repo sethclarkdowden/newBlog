@@ -7,9 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+<div class="lower_header">
+	<ul class="header_links">
+		<li><a href="#">Home</a><span class= "devider"> /</span></li>
+		<li><a href="#">Tags</a><span class= "devider"> /</span></li>
+		<li><a href="#">About</a><span class= "devider"> /</span></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</div>
+</header>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 <%= yield %>
-
+<footer></footer>
 </body>
 </html>
