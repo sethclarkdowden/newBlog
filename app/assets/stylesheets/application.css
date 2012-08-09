@@ -19,7 +19,7 @@ color: black;
 }
 
 .contaner{
-	width: 920px;
+	width: 700px;
 	margin: 0 auto;
 	padding: 3px;
 background: #EEE;
@@ -37,6 +37,16 @@ border-radius: 3px;
 	color: black;
 }
 
+.post_title a:hover {
+	text-decoration: underline;
+}
+
+.author_timestamp{
+	font: 13px Helvetica, arial, freesans, clean, sans-serif;
+	font-weight: 500;
+	color: #5c5c5c;
+}
+
 .post_body_sample {
 	font: 13px Helvetica, arial, freesans, clean, sans-serif;
 
@@ -45,18 +55,98 @@ border-radius: 3px;
 .post_body {
 	font: 13px Helvetica, arial, freesans, clean, sans-serif;
 
+
+
+}
+
+p {
+display: block;
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+.sample_body{
+}
+
+.sample_body_img{
+	width: 315px;
+	float: right;
+
 }
 
 .post_header {
 	font-size: 16px;
-line-height: 20px;
-font-weight: bold;
-padding: 10px 10px;
-color: #555;
-text-shadow: 0 1px 0 white;
-display: block;
-border: 1px solid #CACACA;
-border-bottom: 0 none;
+	line-height: 20px;
+	font-weight: bold;
+	padding: 10px 10px;
+	color: #555;
+	text-shadow: 0 1px 0 white;
+	display: block;
+	border: 1px solid #CACACA;
+	border-bottom: 0 none;
 	background:-webkit-linear-gradient(#FAFAFA, #EAEAEA);
-
 }
+
+.posts_footer {
+		font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+	padding: 10px 10px;
+	color: #555;
+	text-shadow: 0 1px 0 white;
+	display: block;
+	border: 1px solid #CACACA;
+	border-bottom: 0 none;
+	background-color: white;
+}
+
+.pagination {
+        font-size: 11px;
+        float: left;
+        margin: 0;
+        padding: 3px 0 4px;
+    }
+        .pagination a,
+        .pagination span {
+            padding: 3px 3px 2px;
+        }
+        .pagination .disabled {
+            background:none repeat scroll 0 0 transparent;
+            border:medium none;
+            color:#999999;
+            cursor:default;
+        }
+        .pagination a {
+            color: #5c5c5c;
+            cursor:pointer;
+            text-decoration:none;
+        }
+        .pagination a:hover {
+            background-color: #5c5c5c;
+            border-bottom:1px solid  #5c5c5c;
+            border-color:#D8DFEA #D8DFEA  #5c5c5c;
+            color:#FFFFFF;
+            text-decoration:none;
+        }
+        .pagination .current {}
+            .pagination .current {
+                border-bottom:2px solid  #5c5c5c;
+                border-color: #5c5c5c;
+                color: #5c5c5c;
+                font-weight:bold;
+                padding-left:2px;
+                padding-right:2px;
+            }
+            .pagination .current a:hover {
+                background-color: #5c5c5c;
+                color:#FFFFFF;
+            }
+
+        .pagination .prev_page {
+
+        }
+        .pagination .next_page {
+
+        }
