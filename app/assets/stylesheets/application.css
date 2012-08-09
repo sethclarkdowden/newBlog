@@ -11,3 +11,52 @@
  *= require_self
  *= require_tree .
  */
+h2 {
+font-size: 24px;
+border-bottom: 1px solid #CCC;
+color: black;
+	
+}
+
+.contaner{
+	width: 920px;
+	margin: 0 auto;
+	padding: 3px;
+background: #EEE;
+border-radius: 3px;
+}
+
+.post{
+	background-color: white;
+	border: 1px solid #CACACA;
+	padding: 30px;
+}
+
+.post_title {
+	text-decoration: none;
+	color: black;
+}
+
+.post_body_sample {
+	font: 13px Helvetica, arial, freesans, clean, sans-serif;
+
+}
+
+.post_body {
+	font: 13px Helvetica, arial, freesans, clean, sans-serif;
+
+}
+
+.post_header {
+	font-size: 16px;
+line-height: 20px;
+font-weight: bold;
+padding: 10px 10px;
+color: #555;
+text-shadow: 0 1px 0 white;
+display: block;
+border: 1px solid #CACACA;
+border-bottom: 0 none;
+	background:-webkit-linear-gradient(#FAFAFA, #EAEAEA);
+
+}

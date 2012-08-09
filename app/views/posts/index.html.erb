@@ -1,20 +1,22 @@
-<h1>All Articles</h1>
 
-<ul>
-  <% @posts.each do |post| %>
-    <li>
-    	<%= link_to post.title, post_path(post), :class => 'post_title', :id => "post_#{post.id}" %><br>
-            <% if post.img? %>
-                <%= image_tag post.img.url(:thumb) %>
-            <% end %>
-    	<p>By: <%= post.author  %>, <%= post.created_at.strftime("%m/%d/%Y") %> <%= post.created_at.strftime("At %I:%M%p") %></p>	
 
-    	<p> 
-    		<%= truncate(post.body, :length => 500, :separator => ' ', :omission => '... ' ) %>
-    		<%= link_to "(continued)", post_path(post), :class => 'post_title', :id => "post_#{post.id}" %>
-    	</p>
-    </li>
-  <% end %>
-</ul>
+    <div class = "contaner">
+      <span class = "post_header"><h1>Articles</h1></span>  
+        <article class = "post"> 
+         <% @posts.each do |post| %>
+            <h2><%= link_to post.title, post_path(post), :class => 'post_title', :id => "post_#{post.id}" %></h2>
+             <p class ="post_body_sample">By: <%= post.author  %>, <%= post.created_at.strftime("%m/%d/%Y") %> <%= post.created_at.strftime("At %I:%M%p") %></p>
+                <% if post.img? %>
+                        <%= image_tag post.img.url(:thumb) %>
+                <% end %>
+           	
+
+            <p class = "post_body_sample"> 
+            	<%= truncate(post.body, :length => 500, :separator => ' ', :omission => '... ' ) %>
+            	<%= link_to "(continued)", post_path(post), :class => 'post_title', :id => "post_#{post.id}" %>
+            </p>
+         <% end %>
+        </article>
+    </div>
 
 <%= will_paginate @posts %>
