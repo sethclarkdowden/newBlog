@@ -1,7 +1,7 @@
 
-    <div class="field">
         <div class = "contaner">
-          <span class = "post_header"><h1>Articles</h1></span>  
+          <div class = "post_contaner">
+            <p class="post_header"><p>   
             <article class = "post"> 
              <% @posts.each do |post| %>
                 <h2>
@@ -31,17 +31,6 @@
                     <% end %>    
              <% end %>
             </article>
+            </div>
            <div class = "pagination"> <%= will_paginate @posts %> </div>
         </div>
-            <div class="side_bar">
-                <ul>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                </ul>
-            </div>
-    </div>

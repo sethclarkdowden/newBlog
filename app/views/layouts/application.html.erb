@@ -9,22 +9,38 @@
 <body>
 <header>
 <div class="lower_header">
+	<div class ="header_paths">
 	<ul class="header_links">
 		<li><a href="#">Home</a><span class= "devider"> /</span></li>
 		<li><a href="#">Tags</a><span class= "devider"> /</span></li>
 		<li><a href="#">About</a><span class= "devider"> /</span></li>
 		<li><a href="#">Contact</a></li>
 	</ul>
-	<form name="input" action="html_form_action.asp" method="get">
-Search: <input type="text" name="" />
-<input type="" value="" />
 </form>
 </div>
 </header>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-<%= yield %>
-<footer></footer>
+  <div class="field">
+		<%= yield %>
+    <div class="side_bar">
+    	<div class= "side_bar_contaner">
+	   		<div class= "side_bar_bio">
+	   		</div>	
+   		</div>
+    </div>
+  </div>
+
+<div class="clearboth"></div>
+
+	<footer>
+		<div class="footer_banner">
+		<div = class="footer_content">
+
+		</div>	
+		</div>
+	</footer>
+
 </body>
 </html>

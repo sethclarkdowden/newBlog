@@ -1,37 +1,30 @@
 
 
-<div class="field">
-        <div class = "contaner">
-          <span class = "post_header"><h1>Articles</h1></span>  
-            <article class = "post"> 
-                <h2>
-                    <%= @post.title %>
-                        <span class = "author_timestamp">
-                            By: <%= @post.author  %>, <%= @post.created_at.strftime("%m/%d/%Y") %> <%= @post.created_at.strftime("At %I:%M%p") %>
-                        </span>
-                </h2>
-									<% if @post.img? %>
-											<%= image_tag @post.img.url(:medium) %>
-									<% end %>
-                <p>
-									<%= @post.body %>
-								</p>
-            </article>
-            <%= link_to "edit", edit_post_path(@post) if can? :update, @post %>
-						<%= link_to "delete", post_path(@post) if can? :destroy, @post, :method =>:delete, :confirm => "Reallu delete this article"%>
-						<%= link_to "Back to Articles List", posts_path %>
-						<%= render :partial => 'comment', :collection => @post.comments %>
-						<%= render :partial => 'comment_form' %>
-        </div>
-            <div class="side_bar">
-                <ul>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                    <li>Important List </li>
-                </ul>
-            </div>
-    </div>
+
+	<div class = "contaner">
+		<div class = "post_contaner">
+			<article class = "post"> 
+				<h2>
+					<%= @post.title %>
+					<span class = "author_timestamp">
+					By: <%= @post.author  %>, <%= @post.created_at.strftime("%m/%d/%Y") %> <%= @post.created_at.strftime("At %I:%M%p") %>
+					</span>
+				</h2>
+				<% if @post.img? %>
+					<%= image_tag @post.img.url(:medium) %>
+				<% end %>
+				<p>
+					<%= @post.body %>
+				</p>
+				<%= link_to "edit", edit_post_path(@post) if can? :update, @post %>
+				<%= link_to "delete", post_path(@post) if can? :destroy, @post, :method =>:delete, :confirm => "Reallu delete this article"%>
+				<%= link_to "Back to Articles List", posts_path %>
+			</article>
+		</div>
+		<div class="comment_cantaner_buble">
+			<%= render :partial => 'comment', :collection => @post.comments %>
+		</div>
+		<div class = "form_contaner">
+			<%= render :partial => 'comment_form' %>
+		</div>
+	</div> 
