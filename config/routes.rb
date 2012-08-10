@@ -4,6 +4,10 @@ NewBlog::Application.routes.draw do
   root :to => "Posts#index"
   resources :posts
   resources :comments
+
+  match '/tags' => "Posts#tags"
+  match '/about' => "Posts#about"
+  match '/contact' => "Posts#contact"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

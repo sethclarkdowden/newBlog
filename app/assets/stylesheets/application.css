@@ -58,10 +58,35 @@ font-weight: bold;
 	color: #FF4629;
 	border-bottom: 3px solid #333;
 }
+.header_links .header_link_current{
+	color: #FF4629;
+	border-bottom: 3px solid #333;
+}
+
+.continued{
+	text-decoration: none;
+	color: black;
+}
+.continued:hover{
+			color: #606060;
+
+}
+
 .header_paths{
 	width: 235px;
 	margin: 0 auto;
 	padding: 12px;
+
+}
+.post_title{
+	font:22px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+
+}
+
+.post_title:hover {
+		color: #606060;
+		border-bottom: 1px solid #606060;
 
 }
 

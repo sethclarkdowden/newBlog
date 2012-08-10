@@ -11,10 +11,10 @@
 <div class="lower_header">
 	<div class ="header_paths">
 	<ul class="header_links">
-		<li><a href="#">Home</a><span class= "devider"> /</span></li>
-		<li><a href="#">Tags</a><span class= "devider"> /</span></li>
-		<li><a href="#">About</a><span class= "devider"> /</span></li>
-		<li><a href="#">Contact</a></li>
+		<li><%= link_to "Home", root_path, :class => current_page?(root_path) ? "header_link_current" : "a" %> /</span></li>
+		<li><%= link_to "Tags", tags_path, :class => current_page?(tags_path) ? "header_link_current" : "a" %>  /</span></li>
+		<li><%= link_to "About", about_path, :class => current_page?(about_path) ? "header_link_current" : "a" %> /</span></li>
+		<li><%= link_to "Contact", contact_path, :class => current_page?(contact_path) ? "header_link_current" : "a" %> </li>
 	</ul>
 </form>
 </div>
