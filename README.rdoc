@@ -22,6 +22,19 @@ blog is not currently hosted hope to have up and ruing in the next cupel days
 
 4.jumpstartlab.com
 
+== Plans 
 
+1. get blog hosted
 
+2. create rss feed
+
+3. create content for About page
+
+4. add tags to post and add content to tags page
+
+5. add search post functionality  
+
+6. make contact page send email to me 
+
+7. much much more 
 
