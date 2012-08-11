@@ -296,6 +296,21 @@ display: block;
 	background-color: white;
 }
 
+.face{
+	margin-top: 10px;
+	float: right;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
+}
+
+.socal_bar {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	float: bottom;
+}
+
 .pagination {
         font-size: 11px;
         float: left;
